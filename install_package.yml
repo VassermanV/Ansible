@@ -1,0 +1,11 @@
+- name: install cifs 
+  hosts: rhel_server
+  #connection: local
+  gather_facts: false
+  #become: yes 
+
+  tasks:
+   
+    - name: install cifs 
+      ansible.builtin.yum:
+        name: cifs-utils 
