@@ -1,11 +1,10 @@
 - name: install cifs 
-  hosts: rhel_server
-  #connection: local
+  hosts: rhel_server    # Create an inventory file with a list of servers where you need to install packages
   gather_facts: false
   #become: yes 
 
   tasks:
    
     - name: install cifs 
-      ansible.builtin.yum:
-        name: cifs-utils 
+      ansible.builtin.yum:          # to install package (in my case it`s RHEL so I`m using yum) 
+        name: cifs-utils            # package name 
